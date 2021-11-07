@@ -28,7 +28,7 @@ MAPS_API_KEY = os.environ["MAPS_API_KEY"]
 def view_map():
     """Open map, locate user, display markers."""
 
-    return render_template("index.html")
+    return render_template("index.html", MAPS_API_KEY=MAPS_API_KEY)
 
 @app.route("/api/places", methods=["GET"])
 def get_nearby_places():
