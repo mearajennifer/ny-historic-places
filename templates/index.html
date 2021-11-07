@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+  <link rel="stylesheet" href="/static/css/maps.css"/>
+
+  <script src="/static/js/mapStyles.js"></script>
+  <script src="/static/js/maps.js"></script>
+  <script
+    async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB76ph-wYGgPgXBOg7nv-eQUOiu_kDFiu0&callback=initMap">
+  </script>
+{% endblock %}
+
+{% block body %}
+  <header>
+    <nav>
+      <section id="links-left">
+        NY State Historic Places
+      </section>
+      <section id="links-right">
+        <form id="search-form">
+          Street <input id="street-input" type="text">
+          City <input id="city-input" type="text">
+          <input id="search-button" type="submit" value="Search">
+        </form>
+      </section>
+    </nav>
+  </header>
+
+  <main>
+    <section class="map">
+      <div id="map"></div>
+    </section>
+  </main>
+{% endblock %}
